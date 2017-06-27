@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foodsight</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+    <div class="col-md-3 sidebar ">
+      <div class='ingredients-header'>
+        <a href="#">Ingredients</a>
+      </div>
+      <ul class="nav nav-sidebar ">
+        <li>
+          <div class="ingredient-border icon good"><i class="icon fa fa-smile-o"></i></div>
+          <a href="#">Xanthum Gum</a>
+        </li>
+        <li>
+          <div class="ingredient-border icon bad"><i class="icon fa fa-frown-o"></i></div>
+          <a href="#">Thiamine Mononitrate</a>
+        </li>
+        <li>
+          <div class="ingredient-border icon neutral"><i class="icon fa fa-meh-o"></i></div>
+          <a href="#">Azodicarbonamide</a>
+        </li>
+      </ul>
+    </div>
+
+
+      <%= yield %>
+
+  </body>
+</html>

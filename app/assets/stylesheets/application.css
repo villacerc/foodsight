@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap_overrides
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+ body {
+    margin: 0;
+}
+
+ .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: #fbffe1;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: scroll;
+}
+
+.nav-sidebar a{
+  font-size: 20px;
+  color:  #595959;
+}
+
+.ingredient-border i{
+  height: 49px;
+  width: 57px;
+  font-size: 48px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.icon i{
+  color: white;
+}
+
+.good i{
+  background-color: #3FBC46;
+}
+
+.bad i{
+  background-color: #E54C4E;
+}
+
+.neutral i{
+  background-color: #FF6600;
+}
+
+i {
+  transition: background-color 0.25s ease;
+}
+
+a {
+  transition: background-color 0.25s ease;
+}
+.sidebar li {
+  display: flex;
+  margin: 5px;
+}
+
+.ingredients-header {
+  font-family: Palatino;
+  font-size: 30px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #669999;
+}
+
+.ingredients-header a {
+  transition: color 0.25s ease-out;
+}
+
+.ingredients-header a:hover, a:focus {
+  text-decoration: none;
+}
+
+.main {
+  padding: 50px;
+}
+
+li a:focus, li:hover a {
+  background-color: #f5ffb3 !important;
+}
+
+li:hover i {
+  background-color: black;
+}
