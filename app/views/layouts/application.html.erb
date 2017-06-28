@@ -10,26 +10,27 @@
 
     <div class="col-md-3 sidebar ">
       <div class='ingredients-header'>
-        <a href="#">Ingredients</a>
+        <a href="/">Ingredients</a>
       </div>
       <ul class="nav nav-sidebar ">
-        <li>
+        <a href="/xantham_gum">
           <div class="ingredient-border icon good"><i class="icon fa fa-smile-o"></i></div>
-          <a href="#">Xanthum Gum</a>
-        </li>
-        <li>
+          <div class='ingredient-name'>Xanthan Gum</div>
+        </a>
+        <a href="/ingredients/xantham_gum">
           <div class="ingredient-border icon bad"><i class="icon fa fa-frown-o"></i></div>
-          <a href="#">Thiamine Mononitrate</a>
-        </li>
-        <li>
+          <div class='ingredient-name'>Thiamine Mononitrate</div>
+        </a>
+        <a href="/ingredients/xantham_gum">
           <div class="ingredient-border icon neutral"><i class="icon fa fa-meh-o"></i></div>
-          <a href="#">Azodicarbonamide</a>
-        </li>
+          <div class='ingredient-name'>Azodicarbonamide</div>
+        </a>
       </ul>
     </div>
 
-
+    <div class="main col-md-9 col-md-offset-3">
       <%= yield %>
+    </div>
 
   </body>
 </html>
