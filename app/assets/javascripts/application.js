@@ -14,3 +14,11 @@
 //= require jquery
 //= require rails-ujs
 //= require_tree .
+
+$(document).ready(function() {
+    audio = document.getElementById("myAudio");
+
+    function playAudio() {
+        audio.play();
+    }
+});

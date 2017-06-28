@@ -87,6 +87,7 @@ a {
 
 .main {
   padding: 50px;
+  padding-right: 200px;
 }
 
 .nav-sidebar a:focus, .nav-sidebar a:hover {
@@ -102,4 +103,18 @@ a:hover i {
   margin-left: 5px;
   margin-bottom: 5px;
   display: flex !important;
+}
+
+.fa-volume-up {
+  font-size: 25px;
+}
+
+.pronounce-bar {
+  display: flex;
+}
+
+.pronounce-bar p{
+  margin: 5px 10px 5px 0px;
+  font-size: 25px;
+  color: #8c8c8c;
 }

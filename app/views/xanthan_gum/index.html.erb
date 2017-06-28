@@ -1,12 +1,49 @@
 <h1>Xanthan Gum</h1>
-<div class="">
-  a sugar-like compound made by mixing aged (fermented) sugars
-  with a certain kind of bacteria (Xanthomonas campestris).
+<div class="pronounce-bar">
+  <p>[zan-thuhn guhm]</p>
+  <%= audio_tag "xanthan.wav" , id: "myAudio"%>
+  <button onclick="playAudio()" type="button"><i class="fa fa-volume-up"></i></button>
 </div>
 
-<div class="">
-  <h3>It is an emulsifier</h3>
 
-  It helps ingredients blend more
-  effectively and stay blended while waiting on a shelf.
+<div class="body-title">
+  Sugar-like Compound
+</div>
+<div class="body">
+Xanthan gum is created by a sugar fermentation process.
+The bacteria Xanthomonas campestris eat simple sugars and turn them into complex carbohydrates that become xanthan gum.
+After processing, xanthan gum looks like a white powder.
+</div>
+
+<div class="images">
+  <%= image_tag("xanthan1.jpg", height: '400', width: '450')%>
+  <%= image_tag("xanthan2.jpg", height: '400', width: '270', class: 'image2')%>
+</div>
+
+
+<div class="body-title">
+  What is it used for?
+</div>
+
+<div class="body">
+  <ul>
+    <li>acting as a binder, stabilizer, and thickener</li>
+    <li>helping to create a uniform texture in food products</li>
+    <li>replacing some fats</li>
+    <li>creating a creamy texture</li>
+  </ul>
+</div>
+
+<div class="body-title">
+  May be found in...
+</div>
+
+<div class="body">
+  <ul>
+    <li>baked goods</li>
+    <li>dressings</li>
+    <li>ice cream</li>
+    <li>frozen desserts</li>
+    <li>confections</li>
+  </ul>
 </div>
