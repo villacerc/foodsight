@@ -10,15 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require bootstrap-sprockets
 //= require jquery
 //= require rails-ujs
+//= require bootstrap-sprockets
 //= require_tree .
-
-$(document).ready(function() {
-    audio = document.getElementById("myAudio");
-
-    function playAudio() {
-        audio.play();
-    }
-});

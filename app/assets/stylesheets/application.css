@@ -31,7 +31,7 @@
 
 .nav-sidebar .ingredient-name{
   font-size: 20px;
-  color:  #595959;
+  color:  #576600;
   line-height: 48px;
 }
 
@@ -74,14 +74,15 @@ a {
   margin-left: 5px;
   margin-bottom: 20px;
   margin-top: 20px;
-  color: #669999;
 }
 
 .ingredients-header a {
+  color: #829900;
   transition: color 0.25s ease-out;
 }
 
 .ingredients-header a:hover, a:focus {
+  color: #414d00;
   text-decoration: none;
 }
 
@@ -93,10 +94,6 @@ a {
 .nav-sidebar a:focus, .nav-sidebar a:hover {
   background-color: #f5ffb3 !important;
   text-decoration: none;
-}
-
-a:hover i {
-  background-color: black;
 }
 
 .nav-sidebar a {
@@ -117,4 +114,23 @@ a:hover i {
   margin: 5px 10px 5px 0px;
   font-size: 25px;
   color: #8c8c8c;
+}
+
+h1 {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 50px;
+  font-style: italic;
+}
+
+@-webkit-keyframes shake {
+ from {
+    -webkit-transform: rotate(10deg);
+ }
+ to {
+   -webkit-transform-origin:center center;
+   -webkit-transform: rotate(-10deg);
+ }
+}
+a:hover i {
+   -webkit-animation: shake ease-in-out 0.3s infinite alternate;
 }
