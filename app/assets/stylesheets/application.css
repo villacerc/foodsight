@@ -116,7 +116,7 @@ a {
   color: #8c8c8c;
 }
 
-h1 {
+.body-header h1 {
   font-family: "Lucida Grande", sans-serif;
   font-size: 50px;
   font-style: italic;

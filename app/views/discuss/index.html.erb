@@ -1,0 +1,26 @@
+<h1>Discussion Board</h1>
+
+
+
+  <div class="subject-header">
+      <h2 class="">General</h2>
+      <p>Subjects</p>
+  </div>
+
+    <div class="subject">
+      <p class=""><a href="#">General Discussion</a></p>
+      <p class="subject-count"><%= rand(15) %></p>
+    </div>
+    <hr style="margin-bottom:5px;">
+
+    <div class="subject-header">
+      <h2 class="">Ingredients</h2>
+      <p>Subjects</p>
+    </div>
+
+    <% 15.times do  %>
+    <div class="subject">
+      <p class=""><a href="/topic">Ingredient</a></p>
+      <p class="subject-count"><%= rand(15) %></p>
+    </div>
+    <% end %>
