@@ -54,3 +54,37 @@
   color: #423a24;
   font-size: 19px;
 }
+
+.big-line {
+  margin-top: 60px;
+  margin-bottom: 0px;
+  border: 2px solid black;
+}
+
+.small-line {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.post {
+  display: flex;
+  min-height: 170px;
+}
+
+.post-header {
+  padding-top: 25px;
+  width:  270px;
+  font-weight: bold;
+}
+
+.post-body {
+  padding-top: 25px;
+  width: 540px;
+  font-size: 18px;
+}
+
+.post-footer {
+  text-align: right;
+  width: 110px;
+  padding-top: 25px;
+}

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get '/discuss', to: 'discuss#index'
 
   get '/topic', to: 'topic#index'
+
+  get '/topic/show', to: 'topic#show'
+
 end

@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
 
-gem "faker"
+gem "faker", github: 'stympy/faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

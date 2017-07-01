@@ -10,7 +10,7 @@
 
 <% 10.times do %>
 
-  <span class='title'><a href="#"><%= Faker::Company.bs %></a></span>
+  <span class='title'><a href="/topic/show"><%= Faker::Company.bs %></a></span>
   <span class='creator'><%= Faker::Name.name  %></span>
   <span class='replies'><%= rand(15) %></span>
   <span class='views'><%= rand(15) %></span>
