@@ -1,0 +1,90 @@
+// Place all the styles related to the topic controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.topic {
+  margin-bottom: 30px;
+}
+
+.list-headers {
+  float: left;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+
+.list-item {
+  float: left;
+}
+.title {
+  width: 500px;
+  float: left;
+}
+
+.creator {
+  width: 200px;
+  float: left;
+}
+
+.replies {
+  text-align: right;
+  width: 80px;
+  padding-right: 30px;
+  float: left;
+}
+
+.views {
+  width: 50px;
+  float: left;
+}
+
+.topic-title {
+  margin-bottom: 50px;
+}
+
+.line {
+  padding: 0;
+}
+
+.line hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title a{
+
+  color: #423a24;
+  font-size: 19px;
+}
+
+.big-line {
+  margin-top: 60px;
+  margin-bottom: 0px;
+  border: 2px solid black;
+}
+
+.small-line {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.post {
+  display: flex;
+  min-height: 170px;
+}
+
+.post-header {
+  padding-top: 25px;
+  width:  270px;
+  font-weight: bold;
+}
+
+.post-body {
+  padding-top: 25px;
+  width: 540px;
+  font-size: 18px;
+}
+
+.post-footer {
+  text-align: right;
+  width: 110px;
+  padding-top: 25px;
+}

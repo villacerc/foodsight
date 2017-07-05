@@ -1,0 +1,22 @@
+<h1 class='topic'>Ingredient</h1>
+
+  <div class="list-headers">
+    <span class='title'>Subject</span>
+    <span class='creator'>Author</span>
+    <span class='replies'>Replies</span>
+    <span class='views'>Views</span>
+  </div>
+
+
+<% 10.times do %>
+
+  <span class='title'><a href="/topic/show"><%= Faker::Company.bs %></a></span>
+  <span class='creator'><%= Faker::Name.name  %></span>
+  <span class='replies'><%= rand(15) %></span>
+  <span class='views'><%= rand(15) %></span>
+<div class="col-md-12 line">
+<hr>
+</div>
+
+
+<% end %>
