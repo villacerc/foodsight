@@ -1,0 +1,19 @@
+<h1 class='topic'>Topic Title</h1>
+<hr class='big-line'>
+
+  <% 20.times do %>
+    <div class="post">
+      <div class="post-header">
+        <p><%= Faker::Name.name  %></p>
+      </div>
+
+      <div class="post-body">
+        <p><%= Faker::RickAndMorty.quote  %></p>
+      </div>
+
+      <div class="post-footer">
+        <p>June 30, 2017</p>
+      </div>
+    </div>
+    <hr class='small-line'>
+  <% end %>

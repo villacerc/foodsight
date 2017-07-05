@@ -116,10 +116,15 @@ a {
   color: #8c8c8c;
 }
 
-h1 {
+.landing-header h1 {
   font-family: "Lucida Grande", sans-serif;
   font-size: 50px;
   font-style: italic;
+}
+
+.body-header h1 {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 50px;
 }
 
 @-webkit-keyframes shake {
@@ -131,6 +136,7 @@ h1 {
    -webkit-transform: rotate(-10deg);
  }
 }
+
 a:hover i {
    -webkit-animation: shake ease-in-out 0.3s infinite alternate;
 }

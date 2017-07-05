@@ -1,0 +1,41 @@
+// Place all the styles related to the discuss controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  width: 950px;
+  margin: auto;
+  background-color: white;
+}
+
+.subject {
+  background-color: #f2eee3;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.subject p {
+  margin-bottom: 0;
+}
+
+.subject a {
+  text-decoration: none;
+  color: #464339;
+}
+
+.subject-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.subject-header p{
+  margin-right: 15px;
+  margin-top: 25px;
+}
+
+.subject-count {
+  margin-right: 15px;
+}
