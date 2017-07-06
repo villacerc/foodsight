@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get '/topic/show', to: 'topic#show'
 
+  resources :users
+
 end
