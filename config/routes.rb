@@ -3,10 +3,20 @@ Rails.application.routes.draw do
 
   get '/xantham_gum', to: 'xanthan_gum#index'
 
-  get '/discuss', to: 'discuss#index'
+  # get '/topics', to: 'topics#index'
+  #
+  # get '/subject', to: 'subjects#index'
+  #
+  # get '/subject/show', to: 'subjects#show'
 
-  get '/topic', to: 'topic#index'
+  resources :topics, only: [:index]  do
+    resources :subjects
+  end
 
-  get '/topic/show', to: 'topic#show'
+  resources :subjects do
+    resources :replies
+  end
 
+  resources :users
+  
 end

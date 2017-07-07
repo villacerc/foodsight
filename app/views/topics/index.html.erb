@@ -1,15 +1,13 @@
 <h1>Discussion Board</h1>
 
-
-
   <div class="subject-header">
       <h2 class="">General</h2>
       <p>Posts</p>
   </div>
 
     <div class="subject">
-      <p class=""><a href="#">General Discussion</a></p>
-      <p class="subject-count"><%= rand(15) %></p>
+      <%= link_to @topics.first.name, topic_subjects_path(@topics.first)  %>
+      <p class="subject-count"><%= @topics.first.subjects.count %></p>
     </div>
     <hr style="margin-bottom:5px;">
 
@@ -18,9 +16,10 @@
       <p>Posts</p>
     </div>
 
-    <% 15.times do  %>
+    <% @topics.drop(1).each do |topic|  %>
     <div class="subject">
-      <p class=""><a href="/topic">Ingredient</a></p>
-      <p class="subject-count"><%= rand(15) %></p>
+      <%= link_to topic.name, topic_subjects_path(topic) %>
+
+      <p class="subject-count"><%= topic.subjects.count %></p>
     </div>
     <% end %>
