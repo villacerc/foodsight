@@ -93,6 +93,9 @@ a {
 
 .nav-sidebar a:focus, .nav-sidebar a:hover {
   background-color: #f5ffb3 !important;
+}
+
+.nav-sidebar a {
   text-decoration: none;
 }
 

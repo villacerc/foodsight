@@ -6,25 +6,44 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
     <div class="col-md-3 sidebar ">
+      <div class="">
+        <a href="#" id="happy">happy</a>
+      </div>
+      <div class="">
+        <a href="#" id="frown">frown</a>
+      </div>
+      <div class="">
+        <a href="#" id="neutral">neutral</a>
+      </div>
+      <div class="">
+        <a href="#" id="all">all</a>
+      </div>
       <div class='ingredients-header'>
         <a href="/">Ingredients</a>
       </div>
       <ul class="nav nav-sidebar ">
-        <a href="/xantham_gum">
-          <div class="ingredient-border icon good"><i class="fa fa-smile-o"></i></div>
-          <div class='ingredient-name'>Xanthan Gum</div>
-        </a>
-        <a href="">
-          <div class="ingredient-border icon bad"><i class="fa fa-frown-o"></i></div>
-          <div class='ingredient-name'>Thiamine Mononitrate</div>
-        </a>
-        <a href="">
-          <div class="ingredient-border icon neutral"><i class="fa fa-meh-o"></i></div>
-          <div class='ingredient-name'>Azodicarbonamide</div>
-        </a>
+        <div class="ingredient good">
+          <a href="/xantham_gum">
+              <div class="ingredient-border icon"><i class="fa fa-smile-o"></i></div>
+              <div class='ingredient-name'>Xanthan Gum</div>
+          </a>
+        </div>
+        <div class="ingredient bad">
+          <a href="#">
+              <div class="ingredient-border icon"><i class="fa fa-frown-o"></i></div>
+              <div class='ingredient-name'>Thiamine Mononitrate</div>
+          </a>
+        </div>
+        <div class="ingredient neutral">
+          <a href="#">
+              <div class="ingredient-border icon"><i class="fa fa-meh-o"></i></div>
+              <div class='ingredient-name'>Azodicarbonamide</div>
+          </a>
+        </div>
       </ul>
     </div>
 
