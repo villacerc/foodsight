@@ -1,3 +1,8 @@
+<div class="">
+<%#   <%= link_to 'Create New Subject', new_subject_path %>
+
+  <a href="#" id="create-modal-link" data-toggle="modal" data-target="#myModal">Create a New Subject</a>
+</div>
 <h1 class='subject'><%= @topic.name %></h1>
 
   <div class="list-headers">
@@ -18,3 +23,33 @@
     <hr>
   </div>
 <% end %>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">New Subject</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for [@topic,@subject] remote: true do |f| %>
+          <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :body %>
+            <%= f.text_area :body, class: "form-control"  %>
+          </div>
+          <%= f.submit class: "btn btn-primary", id: "button" %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

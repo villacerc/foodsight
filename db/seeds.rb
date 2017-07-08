@@ -28,7 +28,7 @@ topics = Topic.create([
 topics.each do |t|
   rand(5..10).times do
     Subject.create(
-      title: Faker::Name.name,
+      title: Faker::Hipster.sentence,
       body: Faker::RickAndMorty.quote,
       user: users.sample,
       topic: t
