@@ -1,0 +1,10 @@
+<% subjects&.each do |subject| %>
+  <span class='title'><%= link_to subject.title, subject_replies_path(subject) %></span>
+  <span class='creator'><%= subject.user.full_name %></span>
+  <span class='replies'><%= subject.replies.count %></span>
+  <span class='views'><%= rand(15) %></span>
+
+  <div class="col-md-12 line">
+    <hr>
+  </div>
+<% end %>

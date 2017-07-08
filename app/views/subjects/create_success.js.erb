@@ -1,0 +1,5 @@
+if (!subjects) {
+  const subjects = document.querySelector('#subjects');
+}
+
+subjects.innerHTML = `<%= j render 'subjects', subjects: @topic.subjects %>`;

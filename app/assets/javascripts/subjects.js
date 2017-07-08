@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
    $('#new_subject').submit(function(e) {
-
-      // Coding
-      $('#myModal').modal('hide'); //or  $('#IDModal').modal('hide');
+      $('#myModal').modal('hide');
 
    });
 
    $('#myModal').on('hidden.bs.modal', function () {
-      location.reload()
-  })
+      $(this).find("input[type=text],textarea").val('')
+   });
+
 })

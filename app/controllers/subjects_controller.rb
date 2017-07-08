@@ -13,9 +13,12 @@ class SubjectsController < ApplicationController
     @subject = Subject.create subject_params
     @subject.topic = @topic
     @subject.user = current_user
-    if @subject.save
-      format.html { redirect_to question_path(@question), notice: "Answer created successfully!" }
-      format.js { render :create_success }
+    respond_to do |format|
+      if @subject.save
+        format.html { redirect_to subject_path(@subject), notice: "Answer created successfully!" }
+        format.js { render :create_success }
+      end
+    end
     # render json: params
   end
 

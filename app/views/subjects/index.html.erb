@@ -12,17 +12,10 @@
     <span class='views'>Views</span>
   </div>
 
+<div id="subjects">
+  <%= render 'subjects/subjects', subjects: @subjects %>
+</div>
 
-<% @subjects.each do |subject| %>
-  <span class='title'><%= link_to subject.title, subject_replies_path(subject) %></span>
-  <span class='creator'><%= subject.user.full_name %></span>
-  <span class='replies'><%= subject.replies.count %></span>
-  <span class='views'><%= rand(15) %></span>
-
-  <div class="col-md-12 line">
-    <hr>
-  </div>
-<% end %>
 
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
@@ -34,7 +27,7 @@
         <h4 class="modal-title">New Subject</h4>
       </div>
       <div class="modal-body">
-        <%= form_for [@topic,@subject] remote: true do |f| %>
+        <%= form_for [@topic,@subject], remote: true do |f| %>
           <div class="form-group">
             <%= f.label :title %>
             <%= f.text_field :title, class: "form-control" %>
