@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   layout "topics"
 
   def new
