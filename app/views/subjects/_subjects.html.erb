@@ -1,10 +1,10 @@
 <% subjects&.each do |subject| %>
-  <span class='title'><%= link_to subject.title, subject_replies_path(subject) %></span>
-  <span class='creator'><%= subject.user.full_name %></span>
-  <span class='replies'><%= subject.replies.count %></span>
-  <span class='views'><%= rand(15) %></span>
+<% params = {
+    id: subject.id,
+    title: subject.title,
+    body: subject.body,
+    user_full_name: subject.user.full_name,
+    replies_count: subject.replies.count } %>
 
-  <div class="col-md-12 line">
-    <hr>
-  </div>
+  <%= react_component "Subject", {params: params} %>
 <% end %>
