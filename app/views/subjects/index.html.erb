@@ -3,7 +3,8 @@
 
   <a href="#" id="create-modal-link" data-toggle="modal" data-target="#myModal">Create a New Subject</a>
 </div>
-<h1 class='subject'><%= @topic.name %></h1>
+<%= react_component "Topic", {name: @topic.name} %>
+<!-- <h1 class='subject'><%= @topic.name %></h1> -->
 
   <div class="list-headers">
     <span class='title'>Subject</span>
@@ -11,6 +12,7 @@
     <span class='replies'>Replies</span>
     <span class='views'>Views</span>
   </div>
+
 
 <div id="subjects">
   <%= render 'subjects/subjects', subjects: @subjects %>
