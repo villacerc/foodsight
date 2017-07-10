@@ -1,23 +1,14 @@
 <div class="">
-<%#   <%= link_to 'Create New Subject', new_subject_path %>
-
   <a href="#" id="create-modal-link" data-toggle="modal" data-target="#myModal">Create a New Subject</a>
 </div>
+
 <%= react_component "Topic", {name: @topic.name} %>
-<!-- <h1 class='subject'><%= @topic.name %></h1> -->
 
-  <div class="list-headers">
-    <span class='title'>Subject</span>
-    <span class='creator'>Author</span>
-    <span class='replies'>Replies</span>
-    <span class='views'>Views</span>
-  </div>
-
+<%= render 'subjects/headers' %>
 
 <div id="subjects">
   <%= render 'subjects/subjects', subjects: @subjects %>
 </div>
-
 
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
