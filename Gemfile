@@ -35,6 +35,8 @@ gem "faker", github: 'stympy/faker'
 
 gem "react-rails"
 
+gem 'impressionist'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
