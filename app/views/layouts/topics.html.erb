@@ -6,18 +6,26 @@
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+
 </head>
   <body style="background-color: #f0ede4 ">
 
     <div class="container">
       <nav>
         <a href="/">Home</a>
+        |
+        <%= link_to 'Discuss', topics_path %>
+        |
+        <%= form_tag search_index_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "search", :name => nil %>
+        <% end %>
 
         <div class="nav-right">
           <a href="#">Login</a> or
-          <a href="#">Register</a>
+          <%= link_to 'Register', new_user_path %>
         </div>
-        
+
       </nav>
       <%= yield %>
     </div>
