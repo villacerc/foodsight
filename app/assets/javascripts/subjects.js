@@ -1,12 +1,21 @@
 $(document).ready(function(){
 
    $('#new_subject').submit(function(e) {
-      $('#myModal').modal('hide');
+      $('#subjectModal').modal('hide');
 
    });
 
-   $('#myModal').on('hidden.bs.modal', function () {
+   $('#new_reply').submit(function(e) {
+      $('#replyModal').modal('hide');
+
+   });
+
+   $('#subjectModal').on('hidden.bs.modal', function () {
       $(this).find("input[type=text],textarea").val('')
+   });
+
+   $('#replyModal').on('hidden.bs.modal', function () {
+      $(this).find("textarea").val('')
    });
 
 })

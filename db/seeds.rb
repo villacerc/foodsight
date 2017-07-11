@@ -39,7 +39,8 @@ topics.each do |t|
       title: Faker::Hipster.sentence,
       body: Faker::RickAndMorty.quote,
       user: users.sample,
-      topic: t
+      topic: t,
+      created_at: rand(1.years).seconds.ago
     )
   end
 end
@@ -49,7 +50,8 @@ Subject.all.each do |s|
     Reply.create(
       body: Faker::RickAndMorty.quote,
       user: users.sample,
-      subject: s
+      subject: s,
+      created_at: rand(1.years).seconds.ago
     )
   end
 end
