@@ -29,7 +29,8 @@ topics = Topic.create([
   {name: 'Sorbitol'},
   {name: 'Aspartame'},
   {name: 'Saccharin'},
-  {name: 'Sucralose'}
+  {name: 'Sucralose'},
+  {name: 'Xylitol'}
 ])
 
 topics.each do |t|

@@ -12,13 +12,13 @@ Rails.application.routes.draw do
   resources :topics, only: [:index]  do
     resources :subjects
   end
-
+  
   resources :subjects do
     resources :replies
   end
 
   resources :users
 
-  resources :search 
+  resources :search
 
 end

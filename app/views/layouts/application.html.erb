@@ -8,47 +8,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-    <div class="col-md-3 sidebar ">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Filter
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="green"></a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="orange"></a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="red"></a></li>
-          <li role="presentation"><a href="#" class='all color-container'>
-            <div class="small-box green"></div>
-            <div class="small-box orange"></div>
-            <div class="small-box red"></div>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class='ingredients-header'>
-        <a href="/">Ingredients</a>
-      </div>
-      <ul class="nav nav-sidebar ">
-        <div class="ingredient good">
-          <a href="/xantham_gum">
-              <div class="ingredient-border icon"><i class="fa fa-smile-o"></i></div>
-              <div class='ingredient-name'>Xanthan Gum</div>
-          </a>
-        </div>
-        <div class="ingredient bad">
-          <a href="#">
-              <div class="ingredient-border icon"><i class="fa fa-frown-o"></i></div>
-              <div class='ingredient-name'>Thiamine Mononitrate</div>
-          </a>
-        </div>
-        <div class="ingredient neutral">
-          <a href="#">
-              <div class="ingredient-border icon"><i class="fa fa-meh-o"></i></div>
-              <div class='ingredient-name'>Azodicarbonamide</div>
-          </a>
-        </div>
-      </ul>
-    </div>
+  <%= render 'welcome/sidebar', ingredients: ingredients %>
 
     <div class="main col-md-9 col-md-offset-3">
       <nav style="float:right;position:fixed; right: 100px; top: 20px;">
