@@ -1,0 +1,16 @@
+<% replies.each do |reply| %>
+  <div class="post">
+    <div class="post-header">
+      <p><%= reply.user.full_name %></p>
+    </div>
+
+    <div class="post-body">
+      <p><%= reply.body %></p>
+    </div>
+
+    <div class="post-footer">
+      <p><%= reply.created_at.strftime("%b %d, %Y") %></p>
+    </div>
+  </div>
+  <hr class='small-line'>
+<% end %>

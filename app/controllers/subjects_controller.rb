@@ -8,11 +8,12 @@ class SubjectsController < ApplicationController
   def index
     @subject = Subject.new
     # @topic = Topic.find(params[:topic_id])
-    @subjects = @topic.subjects
+    @subjects = @topic.subjects.order("created_at DESC")
   end
 
   def show
-    @replies = @subject.replies
+    @reply = Reply.new
+    @replies = @subject.replies.order("created_at DESC")
   end
 
   def create

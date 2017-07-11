@@ -16,6 +16,7 @@ class Subject extends React.Component {
          <span className='creator'>{subject.user_full_name}</span>
          <span className='replies'>{subject.replies_count}</span>
          <span className='views'>{subject.view_count}</span>
+         <span className='last-update'>{subject.latest_date}</span>
          <div className="col-md-12 line"><hr/></div>
      </div>
     )

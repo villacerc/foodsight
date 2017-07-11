@@ -1,0 +1,5 @@
+if (!replies) {
+  const replies = document.querySelector('#replies');
+}
+
+replies.innerHTML = `<%= j render 'replies', replies: @subject.replies %>`;
