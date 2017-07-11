@@ -96,3 +96,44 @@
 .subject-row {
   padding: 0
 }
+
+.breadcrumb {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: white;
+}
+
+.breadcrumb > li + li.pull-right:last-child:before{
+    content: "";
+}
+.breadcrumb > li + li:nth-child(2):before {
+    content: "";
+}
+
+.discuss-nav {
+  padding-left: 100px;
+  padding-right: 260px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  font-family: "Lucida Grande", sans-serif;
+  padding-right: 40px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.board {
+  margin-top: 70px !important;
+}
+
+.search-bar {
+width: 30px;
+position: relative;
+top: 90px;
+left: 1025px;
+}

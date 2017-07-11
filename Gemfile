@@ -37,6 +37,8 @@ gem "react-rails"
 
 gem 'impressionist'
 
+gem "breadcrumbs_on_rails"
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

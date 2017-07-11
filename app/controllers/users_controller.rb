@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
+  add_breadcrumb "Home", :home_path
+  add_breadcrumb "Discuss", :topics_path
 
   layout "topics"
 
   def new
     @user = User.new
+    add_breadcrumb "Sign Up", :new_user_path
   end
 
   def create

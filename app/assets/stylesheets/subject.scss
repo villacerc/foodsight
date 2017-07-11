@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container {
+  margin-top: 50px !important;
   width: 960px;
   margin: auto;
   background-color: white;
@@ -46,4 +47,9 @@
 
 .subject-title {
   font-size: 25px;
+}
+
+.create-link {
+  font-size: 20px;
+  padding-top: 15px;
 }

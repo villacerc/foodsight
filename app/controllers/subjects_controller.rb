@@ -3,17 +3,22 @@ class SubjectsController < ApplicationController
   before_action :find_subject, only: :show
   before_action :authenticate_user!, only: :create
   impressionist actions: [:show], unique: [:impressionable_id]
+  add_breadcrumb "Home", :home_path
+  add_breadcrumb "Discuss", :topics_path
   layout "topics"
 
   def index
     @subject = Subject.new
     # @topic = Topic.find(params[:topic_id])
     @subjects = @topic.subjects.order("created_at DESC")
+    add_breadcrumb @topic.name, topic_subjects_path(@topic)
   end
 
   def show
     @reply = Reply.new
     @replies = @subject.replies.order("created_at DESC")
+    add_breadcrumb @subject.topic.name, topic_subjects_path(@subject.topic)
+    add_breadcrumb @subject.title.truncate(60), subject_path(@subject)
   end
 
   def create

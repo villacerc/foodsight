@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
+  add_breadcrumb "Home", :home_path
+  add_breadcrumb "Discuss", :topics_path
   layout "topics"
 
   def new
+    add_breadcrumb "Sign In", :new_session_path
   end
 
   def create
