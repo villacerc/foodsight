@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-   $('#happy').click(function(e) {
+   $('.green').click(function(e) {
       $('.ingredient').each(function() {
          $(this).show()
         if ($(this).hasClass('neutral') || $(this).hasClass('bad') ) {
@@ -9,7 +9,7 @@ $(document).ready(function(){
       })
    });
 
-   $('#frown').click(function(e) {
+   $('.red').click(function(e) {
       $('.ingredient').each(function() {
          $(this).show()
         if ($(this).hasClass('good') || $(this).hasClass('neutral') ) {
@@ -18,7 +18,7 @@ $(document).ready(function(){
       })
    });
 
-   $('#neutral').click(function(e) {
+   $('.orange').click(function(e) {
       $('.ingredient').each(function() {
          $(this).show()
         if ($(this).hasClass('good') || $(this).hasClass('bad') ) {
@@ -27,7 +27,7 @@ $(document).ready(function(){
       })
    });
 
-   $('#all').click(function(e) {
+   $('.all').click(function(e) {
       $('.ingredient').each(function() {
          $(this).show()
       })

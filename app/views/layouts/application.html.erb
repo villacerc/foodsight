@@ -9,18 +9,22 @@
   </head>
 
     <div class="col-md-3 sidebar ">
-      <div class="">
-        <a href="#" id="happy">happy</a>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Filter
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="green"></a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="orange"></a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="red"></a></li>
+          <li role="presentation"><a href="#" class='all color-container'>
+            <div class="small-box green"></div>
+            <div class="small-box orange"></div>
+            <div class="small-box red"></div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="">
-        <a href="#" id="frown">frown</a>
-      </div>
-      <div class="">
-        <a href="#" id="neutral">neutral</a>
-      </div>
-      <div class="">
-        <a href="#" id="all">all</a>
-      </div>
+
       <div class='ingredients-header'>
         <a href="/">Ingredients</a>
       </div>

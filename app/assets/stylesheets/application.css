@@ -143,3 +143,47 @@ a {
 a:hover i {
    -webkit-animation: shake ease-in-out 0.3s infinite alternate;
 }
+
+.dropdown-menu {
+  min-width: 115px;
+}
+
+.dropdown-menu a.green:hover {
+  background-color: #39ac3f !important;
+}
+
+.dropdown-menu a.orange:hover {
+  background-color: #e65c00 !important;
+}
+
+.dropdown-menu a.red:hover {
+  background-color: #e23639 !important;
+}
+
+.dropdown-menu a:hover{
+  filter: brightness(85%) !important;
+}
+
+.red {
+  height: 30px;
+  background-color: #E54C4E;
+}
+
+.orange {
+  height: 30px;
+  background-color: #FF6600;
+}
+
+.green {
+  height: 30px;
+  background-color: #3FBC46;
+}
+
+.small-box {
+  width:35px;
+}
+
+.color-container {
+  display: flex !important;
+  padding: 0 !important;
+}

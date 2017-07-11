@@ -22,7 +22,14 @@ topics = Topic.create([
   {name: 'General Discussion', is_ingredient: false},
   {name: 'Xanthan Gum'},
   {name: 'Thiamine Mononitrate'},
-  {name: 'Azodicarbonamide'}
+  {name: 'Azodicarbonamide'},
+  {name: 'Ammonium Sulfate'},
+  {name: 'L-cysteine'},
+  {name: 'Glycerin'},
+  {name: 'Sorbitol'},
+  {name: 'Aspartame'},
+  {name: 'Saccharin'},
+  {name: 'Sucralose'}
 ])
 
 topics.each do |t|
