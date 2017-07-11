@@ -26,6 +26,7 @@
   background: #fbffe1;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 50px;
   overflow-y: scroll;
 }
 
@@ -186,4 +187,8 @@ a:hover i {
 .color-container {
   display: flex !important;
   padding: 0 !important;
+}
+
+.divider {
+  height: 30px;;
 }

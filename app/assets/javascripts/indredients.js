@@ -1,35 +1,47 @@
 $(document).ready(function(){
 
-   $('.green').click(function(e) {
+   $('.green.z').click(function(e) {
       $('.ingredient').each(function() {
-         $(this).show()
+         if($(this).hasClass('ingredient good') && $(this).is(":hidden")) {
+            $(this).slideDown()
+         }
         if ($(this).hasClass('neutral') || $(this).hasClass('bad') ) {
-          $(this).hide()
+          $(this).slideUp()
+          $('.divider').slideUp()
         }
       })
    });
 
-   $('.red').click(function(e) {
+   $('.red.z').click(function(e) {
       $('.ingredient').each(function() {
-         $(this).show()
+         if($(this).hasClass('ingredient bad') && $(this).is(":hidden")) {
+            $(this).slideDown()
+         }
         if ($(this).hasClass('good') || $(this).hasClass('neutral') ) {
-          $(this).hide()
+          $(this).slideUp()
+          $('.divider').slideUp()
         }
       })
    });
 
-   $('.orange').click(function(e) {
+   $('.orange.z').click(function(e) {
       $('.ingredient').each(function() {
-         $(this).show()
+         if($(this).hasClass('ingredient neutral') && $(this).is(":hidden")) {
+            $(this).slideDown()
+         }
         if ($(this).hasClass('good') || $(this).hasClass('bad') ) {
-          $(this).hide()
+          $(this).slideUp()
+          $('.divider').slideUp()
         }
       })
    });
 
    $('.all').click(function(e) {
       $('.ingredient').each(function() {
-         $(this).show()
+         if($(this).is(":hidden")) {
+            $(this).slideDown()
+         }
+         $('.divider').slideDown()
       })
    });
 })
