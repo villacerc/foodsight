@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  layout "topics"
+
   def new
   end
 
@@ -12,7 +14,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to home_path, notice: 'Thank you for signing in! ❤️'
+      redirect_to topics_path
     else
       # `flash.now` makes the flash message available to the current request
       # as opposed to next request with just `flash`
@@ -23,6 +25,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to home_path, notice: 'Signed Out! 🏃'
+    redirect_to topics_path, notice: 'Sign out successful'
   end
 end

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :topics, only: [:index]  do
     resources :subjects
   end
-  
+
   resources :subjects do
     resources :replies
   end
@@ -20,5 +20,9 @@ Rails.application.routes.draw do
   resources :users
 
   resources :search
+
+  resources :sessions, only: [:new, :create] do
+    delete :destroy, on: :collection
+end
 
 end
