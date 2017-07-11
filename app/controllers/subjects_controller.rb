@@ -1,12 +1,18 @@
 class SubjectsController < ApplicationController
-  before_action :find_topic
+  before_action :find_topic, except: :show
+  before_action :find_subject, only: :show
   before_action :authenticate_user!, only: :create
+  impressionist actions: [:show], unique: [:impressionable_id]
   layout "topics"
 
   def index
     @subject = Subject.new
     # @topic = Topic.find(params[:topic_id])
     @subjects = @topic.subjects
+  end
+
+  def show
+    @replies = @subject.replies
   end
 
   def create
@@ -23,6 +29,10 @@ class SubjectsController < ApplicationController
   end
 
   private
+
+  def find_subject
+    @subject = Subject.find(params[:id])
+  end
 
   def find_topic
     @topic = Topic.find(params[:topic_id])
