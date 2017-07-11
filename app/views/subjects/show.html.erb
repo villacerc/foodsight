@@ -1,0 +1,34 @@
+<h1 class='subject'><%= @subject.title %></h1>
+<hr class='big-line'>
+
+<div class="post">
+  <div class="post-header">
+    <p><%= @subject.user.first_name  %></p>
+  </div>
+
+  <div class="post-body">
+    <p><%= @subject.body  %></p>
+  </div>
+
+  <div class="post-footer">
+    <p>June 30, 2017</p>
+  </div>
+</div>
+<hr class='small-line'>
+
+  <% @replies.each do |reply| %>
+    <div class="post">
+      <div class="post-header">
+        <p><%= reply.user.full_name %></p>
+      </div>
+
+      <div class="post-body">
+        <p><%= reply.body %></p>
+      </div>
+
+      <div class="post-footer">
+        <p>June 30, 2017</p>
+      </div>
+    </div>
+    <hr class='small-line'>
+  <% end %>
