@@ -5,4 +5,8 @@ $(document).ready(function() {
        return audio.play();
     }
 
+    $('.speaker').click(function() {
+        playAudio()
+    })
+
 });
