@@ -22,11 +22,24 @@
         <% end %>
 
         <div class="nav-right">
-          <a href="#">Login</a> or
-          <%= link_to 'Register', new_user_path %>
+          <% if user_signed_in? %>
+            <p>Welcome, <%= current_user.first_name %></p>
+            |
+            <%= link_to 'Sign out', sessions_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Login', new_session_path %>
+            |
+            <%= link_to 'Register', new_user_path %>
+          <% end %>
+
         </div>
 
       </nav>
+      <% if flash[:notice] %>
+        <div class='alert alert-success'><%= flash[:notice] %></div>
+      <% elsif flash[:alert] %>
+        <div class='alert alert-danger'><%= flash[:alert] %></div>
+      <% end %>
       <%= yield %>
     </div>
 
