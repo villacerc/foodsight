@@ -11,6 +11,22 @@
   <body style="background-color: #f0ede4 ">
 
     <ol class="breadcrumb discuss-nav">
+
+      <div class="search-bar pull-right">
+        <div class="">
+          <%= form_tag search_index_path, :method => 'get' do %>
+          <div class="input-group stylish-input-group">
+              <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+              <span class="input-group-addon">
+                  <button type="submit">
+                      <span class="glyphicon glyphicon-search"></span>
+                  </button>
+              </span>
+          </div>
+
+         <% end %>
+        </div>
+      </div>
       <li class="logo">foodsight</li>
       <%= render_breadcrumbs :tag => :li, :separator => "" %>
 
@@ -18,20 +34,16 @@
       <li class="pull-right"><%= link_to 'Sign out', sessions_path, method: :delete %></li>
       <li class="pull-right">Welcome, <%= current_user.first_name %></li>
       <% else %>
+
       <li class="pull-right"><%= link_to 'Login', new_session_path %></li>
       <li class="pull-right"><%= link_to 'Register', new_user_path %></li>
       <% end %>
 
-    </ol>
 
-    <div class="search-bar">
-      <%= form_tag search_index_path, :method => 'get' do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-    </div>
+    </ol>
 
     <div class="container">
 
-    <% end %>
 
       <% if flash[:notice] %>
         <div class='alert alert-success'><%= flash[:notice] %></div>

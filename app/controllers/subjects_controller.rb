@@ -25,6 +25,7 @@ class SubjectsController < ApplicationController
     @subject = Subject.create subject_params
     @subject.topic = @topic
     @subject.user = current_user
+    @subjects = @topic.subjects.order("created_at DESC")
     respond_to do |format|
       if @subject.save
         format.html { redirect_to subject_path(@subject), notice: "Answer created successfully!" }
