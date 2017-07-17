@@ -13,5 +13,7 @@ rails db:create db:migrate db:seed
 rails s
 ```
 Go to http://localhost:3000 to view the app.  
+
 Link to Heroku:  
+  
 https://foodsight.herokuapp.com/
