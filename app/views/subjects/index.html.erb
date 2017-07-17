@@ -1,6 +1,6 @@
 <div class="create-link">
   <a href="#" id="create-modal-link" data-toggle="modal" data-target="#subjectModal">
-    Create a New Subject
+    Create a New Topic
   </a>
 </div>
 
@@ -19,7 +19,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">New Subject</h4>
+        <h4 class="modal-title">New Topic</h4>
       </div>
       <div class="modal-body">
         <%= form_for [@topic,@subject], remote: true do |f| %>
@@ -31,7 +31,7 @@
             <%= f.label :body %>
             <%= f.text_area :body, class: "form-control"  %>
           </div>
-          <%= f.submit class: "btn btn-primary", id: "button" %>
+          <%= f.submit "Submit", class: "btn btn-primary", id: "button" %>
         <% end %>
       </div>
       <div class="modal-footer">

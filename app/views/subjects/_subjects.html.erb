@@ -1,20 +1,20 @@
-
 <% subjects&.each do |subject| %>
-<% latestDate = "" %>
-<% if subject.replies.count > 0 %>
-  <% latestDate = subject.replies.order("created_at").last.created_at.strftime("%b %d, %Y") %>
-<% else %>
-  <% latestDate = subject.created_at.strftime("%b %d, %Y") %>
-<% end %>
- <% params = {
-    id: subject.id,
-    title: subject.title,
-    body: subject.body,
-    user_full_name: subject.user.full_name,
-    replies_count: subject.replies.count,
-    view_count: subject.impressionist_count,
-    latest_date: latestDate } %>
+  <% latestDate = "" %>
 
-  <%= react_component "Subject", {params: params} %>
+  <% if subject.replies.count > 0 %>
+    <% latestDate = subject.replies.order("created_at").last.created_at.strftime("%b %d, %Y") %>
+  <% else %>
+    <% latestDate = subject.created_at.strftime("%b %d, %Y") %>
+  <% end %>
 
+   <% params = {
+      id: subject.id,
+      title: subject.title,
+      body: subject.body,
+      user_full_name: subject.user.full_name,
+      replies_count: subject.replies.count,
+      view_count: subject.impressionist_count,
+      latest_date: latestDate } %>
+
+    <%= react_component "Subject", {params: params} %>
 <% end %>
