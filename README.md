@@ -1,13 +1,13 @@
-# README
+# Foodsight
 
-Rails version
+Rails version:
 
 ~> 5.1.1
 
-Database creation:
+To get started:
 
-```rails db:create```
-
-Database initialization:
-
-```rails db:migrate db:seed```
+```git clone https://github.com/villacerc/foodsight.git
+cd foodsight
+rails db:create db:migrate db:seed
+rails s
+Go to http://localhost:3000 to view the app.```
