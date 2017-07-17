@@ -1,7 +1,13 @@
 # README
 
-Rails version: ~> 5.1.1
+Rails version
 
-Database creation: rails db:create
+~> 5.1.1
 
-Database initialization: rails db:migrate db:seed
+Database creation:
+
+```rails db:create```
+
+Database initialization:
+
+```rails db:migrate db:seed```
