@@ -2,11 +2,10 @@
 
 Foodsight is an information website that makes it easy to learn about those hard to pronounce food chemicals by breaking down facts in easy-to-read, bite-sized formats. It also comes with a discussion board.
 
-Rails version:
+# Version 
+Rails ~> 5.1.1
 
-~> 5.1.1
-
-To get started:
+# Get Started
 
 ```
 git clone https://github.com/villacerc/foodsight.git
