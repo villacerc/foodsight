@@ -192,3 +192,12 @@ a:hover i {
 .divider {
   height: 30px;;
 }
+
+.sidebar-buttons {
+  display: flex;
+}
+
+.share-buttons {
+  margin-left: auto;
+  order: 2;
+}

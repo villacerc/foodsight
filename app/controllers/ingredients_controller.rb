@@ -1,5 +1,8 @@
 class IngredientsController < ApplicationController
 
+  def xanthan_gum
+  end
+  
   def thiamine_mononitrate
   end
 

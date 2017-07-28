@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
   # 👇 makes the method 👆 available to all my views
   helper_method :user_signed_in?
 
+  def sign_in(user)
+    session[:user_id] = user.id
+  end
+  helper_method :sign_in
+
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end

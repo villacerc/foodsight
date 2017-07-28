@@ -39,6 +39,8 @@ gem 'impressionist'
 
 gem "breadcrumbs_on_rails"
 
+gem 'omniauth-twitter'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
