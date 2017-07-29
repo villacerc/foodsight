@@ -19,6 +19,7 @@ Bundler.require(*Rails.groups)
 module Foodsight
   class Application < Rails::Application
     config.assets.precompile << "audios/*"
+    config.assets.initialize_on_precompile = false
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
