@@ -6,6 +6,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <meta property="og:url"           content="https://foodsight.herokuapp.com/" />
+     <meta property="og:type"          content="website" />
+     <meta property="og:title"         content="Your Website Title" />
+     <meta property="og:description"   content="Your description" />
+     <meta property="og:image"         content="https://i.imgflip.com/1b7wbm.jpg" />
   </head>
 
   <%= render 'welcome/sidebar', ingredients: ingredients %>
