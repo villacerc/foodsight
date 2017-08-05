@@ -41,6 +41,10 @@ gem "breadcrumbs_on_rails"
 
 gem 'omniauth-twitter'
 
+gem 'omniauth-facebook'
+
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

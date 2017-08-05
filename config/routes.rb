@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get '/butylated_hydroxytoluene', to: 'ingredients#butylated_hydroxytoluene'
 
-    get '/xanthan_gum', to: 'ingredients#xanthan_gum'
+  get '/xanthan_gum', to: 'ingredients#xanthan_gum'
 
   resources :topics, only: [:index]  do
     resources :subjects
@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   end
 
   get "/auth/twitter", as: :sign_in_with_twitter
+  get "/auth/facebook", as: :sign_in_with_facebook
   get "/auth/:provider/callback" => "callbacks#index"
 
 end

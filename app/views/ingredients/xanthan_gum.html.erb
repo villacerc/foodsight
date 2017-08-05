@@ -1,5 +1,5 @@
 <div class="share-buttons">
-  <%= render 'share_buttons', name: 'Xanthan Gum'  %>
+  <%= render 'share_buttons', {name: @ingredient.name, link: topic_subjects_path(@ingredient.id) }%>
 </div>
 
 <div class="body-header">
