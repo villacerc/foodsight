@@ -1,0 +1,65 @@
+<!-- <h1>Sign In</h1>
+
+<%= form_tag sessions_path do %>
+  <div class="form-group">
+    <%= label_tag :email %>
+    <%= email_field_tag :email, '', class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :password %>
+    <%= password_field_tag  :password, '', class: "form-control" %>
+  </div>
+  <%= submit_tag 'Sign In', class: "btn btn-primary" %>
+<% end %>
+<h4>OR</h4>
+<%= link_to "Sign in with Twitter", sign_in_with_twitter_path %>
+<%= link_to "Sign in with Facebook", sign_in_with_facebook_path %> -->
+
+<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header login_modal_header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        		<h2 class="modal-title" id="myModalLabel">Login to Your Account <%= @hello %></h2>
+      		</div>
+      		<div class="modal-body login-modal">
+						<div id="modal-error">
+
+						</div>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class='modal-body-left'>
+								<%= form_tag sessions_path, remote: true do %>
+	        			<div class="form-group">
+									<%= email_field_tag :email, nil, class: "form-control login-field", placeholder: "Email" %>
+										<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+
+		            	<div class="form-group">
+		            	  	<%= password_field_tag  :password, nil, class: "form-control login-field", placeholder: "Password" %>
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+									<%= submit_tag 'Log In', class: "btn btn-success modal-login-btn" %>
+									<% end %>
+		            	<a href="#" class="login-link text-center">Lost your password?</a>
+	        		</div>
+
+	        		<div class='modal-body-right'>
+	        			<div class="modal-social-icons">
+	        				<a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<a href='#' class="btn btn-default twitter"> <i class="fa fa-twitter modal-icons"></i> Sign In with Twitter </a>
+	        			</div>
+	        		</div>
+	        		<div id='center-line'> OR </div>
+	        	</div>
+        		<div class="clearfix"></div>
+
+        		<div class="form-group modal-register-btn">
+        			<button class="btn btn-default"> New User Please Register</button>
+        		</div>
+      		</div>
+      		<div class="clearfix"></div>
+      		<div class="modal-footer login_modal_footer">
+      		</div>
+    	</div>
+  	</div>

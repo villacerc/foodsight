@@ -18,7 +18,7 @@ class SubjectsController < ApplicationController
     @reply = Reply.new
     @replies = @subject.replies.order("created_at DESC")
     add_breadcrumb @subject.topic.name, topic_subjects_path(@subject.topic)
-    add_breadcrumb @subject.title.truncate(60), subject_path(@subject)
+    add_breadcrumb @subject.title.truncate(50), subject_path(@subject)
   end
 
   def create

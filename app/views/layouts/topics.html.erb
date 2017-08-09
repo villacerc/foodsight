@@ -30,18 +30,24 @@
       <li class="logo">foodsight</li>
       <%= render_breadcrumbs :tag => :li, :separator => "" %>
 
-      <% if user_signed_in? %>
-      <li class="pull-right"><%= link_to 'Sign out', sessions_path, method: :delete %></li>
-      <li class="pull-right">Welcome, <%= current_user.first_name %></li>
-      <% else %>
 
-      <li class="pull-right"><%= link_to 'Login', new_session_path %></li>
-      <li class="pull-right"><%= link_to 'Register', new_user_path %></li>
-      <% end %>
+        <% if user_signed_in? %>
+        <li class="pull-right"><%= link_to 'Sign out', sessions_path, method: :delete %></li>
+        <li id ="username" class="pull-right">Welcome, <%= current_user.first_name %></li>
+        <% else %>
+
+        <li class="pull-right">  <a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+        <li class="pull-right"><%= link_to 'Register', new_user_path %></li>
+
+        <% end %>
+
+
 
 
     </ol>
-
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <%= render "sessions/new" %>
+    </div>
     <div class="container">
 
 
