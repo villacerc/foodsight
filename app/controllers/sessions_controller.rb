@@ -13,21 +13,24 @@ class SessionsController < ApplicationController
     # 2. if found, we authenticate the user with the given password
     # 3. if not found, we alert the user with wrong credentials
 
-    user = User.find_by(email: params[:email])
+    @user = User.find_by(email: params[:email])
 
-    if user&.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to topics_path
-    else
-      # `flash.now` makes the flash message available to the current request
-      # as opposed to next request with just `flash`
-      flash.now[:alert] = 'Wrong credentials! 🚫'
-      render :new
+    respond_to do |format|
+      if @user&.authenticate(params[:password])
+        session[:user_id] = @user.id
+        flash[:notice] = "Sign in successul"
+        format.js {render :success_login}
+      else
+        # `flash.now` makes the flash message available to the current request
+        # as opposed to next request with just `flash`
+        @error = "Invalid Credentials, please try again!"
+        format.js {render :failed_login }
+      end
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to topics_path, notice: 'Sign out successful'
+    redirect_to request.referrer, notice: 'Sign out successful'
   end
 end
