@@ -7,7 +7,7 @@ end
 
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '~> 5.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -31,7 +31,7 @@ gem "font-awesome-rails"
 
 gem 'bcrypt'
 
-gem "faker", github: 'stympy/faker'
+gem 'faker', '~> 2.20'
 
 gem "react-rails"
 
@@ -43,6 +43,7 @@ gem 'omniauth-twitter'
 
 gem 'omniauth-facebook'
 
+gem 'psych', '< 4'
 
 
 
