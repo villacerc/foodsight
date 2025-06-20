@@ -4,10 +4,10 @@
     <title>Foodsight</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <meta property="og:url"           content="https://foodsight.herokuapp.com/" />
+    <meta property="og:url"           content="https://foodsight.mooo.com/" />
      <meta property="og:type"          content="website" />
      <meta property="og:title"         content="Foodsight" />
      <meta property="og:description"   content="Learn about those hard to pronounce food chemicals in a bite-sized format" />

@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
 
   def user_signed_in?
   # the following is to prevent the app from crashing if we have

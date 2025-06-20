@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: foodsight_production
-  username: foodsight
+  username: postgres
   password: <%= ENV['FOODSIGHT_DATABASE_PASSWORD'] %>
