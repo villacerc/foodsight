@@ -1,0 +1,23 @@
+<div class="share-buttons">
+  <%= render 'ingredients/share_buttons', name: 'A place to learn about food chemicals', link: topics_path %>
+</div>
+
+<div class="landing">
+  <div class="landing-header">
+    <h1>foodsight</h1>
+  </div>
+    <div class="body">
+      <h3>A place to learn about those hard to pronounce food ingredients</h3>
+      <ul>
+        <li>Which inredients are most dangerous?</li>
+        <li>How to pronounce them</li>
+        <li>What foods are they found in most commonly?</li>
+      </ul>
+      <h4>Click any ingredient on the left to view them</h4>
+    </div>
+<section id="privacy">
+  <h2>Privacy Policy</h2>
+  <p>We use Facebook Login to authenticate users. We only collect public profile information such as name and email for login purposes. We do not share or sell your data.</p>
+
+</section>
+  </div>
